@@ -109,6 +109,9 @@ Pixelfed is a full-blown PHP application comprising an Apache2 webserver, a work
 
 That's it! Point your browser to [http://pixelfed.pastabytes.test:8080](http://pixelfed.pastabytes.test:8080) and you should be able to login with the user you just created and start posting pictures. Of course, this is only working on your local machine for now.
 
+
+![Pixelfed login](../images/pixelfed_login.gif "Pixelfed login")
+
 #### Oauth2 client
 
 We will be using Pixelfed as SSO to allow seamless communication between the photo annotation app and Pixelfed in the browser. We just need to create a client and take note of the secret the application generates. This one requires a different endpoint to be loaded. Assuming the configuration above, point your browser to [http://pixelfed.pastabytes.test:8080/settings/developers](http://pixelfed.pastabytes.test:8080/settings/developers). If you created your user as admin, you should be able to login also here with their credentials. From **OAuth Clients** create a new client. The important part here is setting the _Redirect URL_ correctly to point to the exact URL on which the photo annotation app will be exposed. Assuming you will continue to follow these instructions, set it to `http://encounter.pastabytes.test:8051`. The client ID and the client secret (to which you can return later from the same area of Pixelfed) will be used to configure the photo annotation app.
