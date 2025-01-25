@@ -57,9 +57,11 @@ The reference data we will need in our photo annotation app to generate suggesti
     ```
 
     ![Querying bird data](../images/SPARQL_smoke_test.gif "Querying bird data")
-5. To finish the local setup of the semantic repository we need to allow the SPARQL client to write to the database, as this permission is not granted by default. Select the tabs `System Admin -> User Accounts`, then choose your account (since this is a local development environment, I'll be using the `dba` admin account; in a live system this is going to be a dedicated system account). Go to `edit` and give the user the `SPARQL_UPDATE` role as shown.
+5. To finish the local setup of the semantic repository we need to allow the SPARQL client to write to the database, as this permission is not granted by default. Select the tabs `System Admin -> User Accounts`, then choose the `SPARQL` account. Go to `edit` and give the user the `SPARQL_UPDATE` role as shown.
 
     ![Granting SPARQL_UPDATE to user](../images/Grant_user_SPARQL_UPDATE.gif "Granting SPARQL_UPDATE to user")
+
+    Depending on the version of Virtuoso you may also have to follow the instructions from [this post](https://community.openlinksw.com/t/sparul-insert-access-denied-even-after-granting-update-permission/3448/9) in case you still can't insert new data via the SPARQL endpoint.
 
 ## Coming up next
 
